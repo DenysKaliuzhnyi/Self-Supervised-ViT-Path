@@ -1,0 +1,4 @@
+.ipynb_checkpoints/
+__pycache__/
+env/
+attention_visualization_results/

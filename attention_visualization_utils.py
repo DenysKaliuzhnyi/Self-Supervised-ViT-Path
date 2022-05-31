@@ -220,6 +220,7 @@ def create_256x256_map_concat(model, patch, img_fname, output_dir, patch_size=16
             display_instances(image, th_attn[j], fname=img_path, 
                               blur=False, display=False)
             img_mask = Image.open(img_path).resize(image_size)
+            img_mask.save(img_path)  # return back to original image size
             imgs.append(img_mask)
         imgs = getConcatImage(imgs)
         imgs.save(os.path.join(output_dir, "%s_mask_th.png" % img_fname))
